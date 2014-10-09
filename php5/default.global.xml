@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- client configuration file -->
+<configuration>
+	<development>
+		<developmentOn>0</developmentOn>
+	</development>
+	<maintenance>
+		<maintenanceOn>0</maintenanceOn>
+		<administratorIP>[IP ADDRESS]</administratorIP>
+	</maintenance>
+	<application>
+		<id>[APP ID]</id>
+		<secretKey>[SECRET KEY]</secretKey>
+		<client>/client</client>
+	</application>
+	<hosts>
+		<protocol>https</protocol>
+		<domainName>[DOMAIN NAME]</domainName>
+		<localhost></localhost>
+		<apiServer>www.fuzzybit.com/api</apiServer>
+		<localDirectory>[PATH TO PUBLIC]/client</localDirectory>
+	</hosts>
+	<credentials>
+		<username>[USERNAME]</username>
+		<password>[PASSWORD]</password>
+	</credentials>
+	<database>
+		<host>[HOSTNAME]</host>
+		<user>[USERNAME]</user>
+		<pass>[PASSWORD]</pass>
+		<data>[DATABASE]</data>
+	</database>
+	<frontController>
+		<defaultRequest>xoo/sprite/value/0</defaultRequest>
+		<defaultValue>[VALUE]</defaultValue>
+		<http404>[VALUE]</http404>
+	</frontController>
+	<tables>
+		<rows>5</rows>
+		<columns>5</columns>
+		<width>120</width>
+		<height>20</height>
+	</tables>
+</configuration>

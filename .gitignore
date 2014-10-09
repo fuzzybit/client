@@ -1,0 +1,9 @@
+*.bak
+.DS_Store
+.svn
+.htaccess
+.html
+.css
+.js
+global.xml
+public.key

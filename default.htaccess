@@ -1,0 +1,2 @@
+AuthName "FuzzyBit Client"
+AuthUserFile "[PATH TO]/.htpasswd"
