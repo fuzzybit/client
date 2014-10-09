@@ -37,9 +37,13 @@
 <link rel="stylesheet" type="text/css" media="print" href="$protocol://$domain/styles/print.css" />
 <link rel="stylesheet" type="text/css" media="print" href="$protocol://$domain/styles/weloveiconfonts.css" />
 <style>
-.west {position: relative; overflow: hidden; border-width: 0px; float: left;}
-.east {position: relative; overflow: hidden; border-width: 0px; float: right;}
-.clear {position: relative; overflow: hidden; border-width: 0px; clear: both;}
+.west { position: relative; overflow: hidden; border-width: 0px; float: left; }
+.east { position: relative; overflow: hidden; border-width: 0px; float: right; }
+.clear { position: relative; overflow: hidden; border-width: 0px; clear: both; }
+
+@-ms-viewport {
+	width: auto!important;
+}
 
 $_txtStyle
 

@@ -24,9 +24,13 @@
 <title></title>
 <link rel="stylesheet" type="text/css" href="$protocol://$domain/styles/css.css" />
 <style type="text/css">
-.west {position: relative; overflow: hidden; border-width: 0px; float: left;}
-.east {position: relative; overflow: hidden; border-width: 0px; float: right;}
-.clear {position: relative; overflow: hidden; border-width: 0px; clear: both;}
+.west { position: relative; overflow: hidden; border-width: 0px; float: left; }
+.east { position: relative; overflow: hidden; border-width: 0px; float: right; }
+.clear { position: relative; overflow: hidden; border-width: 0px; clear: both; }
+
+@-ms-viewport {
+	width: auto!important;
+}
 
 $_txtStyle
 
