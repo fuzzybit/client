@@ -35,7 +35,7 @@ Create a copy of 'default.htaccess' as '.htaccess' and modify it as necessary.
 
 Create a copy of 'php5/default.global.xml' as 'php5/global.xml' then read the configuration instructions below.
 
-To complete the installation, go to http://www.fuzzybit.com/registration.php to obtain a secret key and specify an application ID.
+To complete the installation, go to https://www.fuzzybit.com/registration.php to obtain a secret key and specify an application ID.
 
 ## Configuration
 
