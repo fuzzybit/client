@@ -24,7 +24,6 @@ The **private** component is:
 * client/
 	* applications/
 	* php5/
-	* .htaccess
 	* README.md
 	* default.htaccess
 
