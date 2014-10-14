@@ -64,6 +64,9 @@ $_txtScript
 <title>FuzzyBit &#8226; $title</title>
 </head>
 <body>
+<div class="edgeLogo" style="left: -10px; width: 60px;"><img src="$protocol://$domain/images/logo.jpg" alt="logo" class="logoImage" style="left: -280px;" /></div>
+<div class="edgeLogo" style="left: auto; right: -10px; width: 60px;"><img src="$protocol://$domain/images/logo.jpg" alt="logo" class="logoImage" style="left: 0px;" /></div>
+
 <a href="$protocol://$domain/"><div id="fuzzybit"><span id="fuzzy">fuzzy</span><span id="bit">BIT</span>&nbsp;<span id="motto">blurring the bounds of the web</span></div></a>
 
 <div id="topLine">$title&nbsp;<img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" /><img src="$protocol://$domain/images/10.png" alt="fuzzy dot" />&nbsp;$title&nbsp;<img src="$protocol://$domain/images/10.png" alt="fuzzy dot" /><img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" />&nbsp;$title</div>
@@ -74,7 +77,7 @@ $_txtContent
 <a href="$protocol://$domain/">Home</a>&nbsp;&#8226;&nbsp;<a href="$protocol://$domain/contact.php">Contact</a>
 </div>
 <div class="footerLine" id="lowerFooter">FuzzyBit Software Inc.</div>
-<script src="$protocol://$domain/javascript/mind-map.js"></script>
+<script src="$protocol://$domain/javascript/mind-map.js" onload="init();"></script>
 </body>
 </html>
 HTML;

@@ -124,6 +124,8 @@
 
 					if (!$_blnValid)
 						$result = "Token mismatch.";
+
+					unset($_SESSION["tokens"][$explode[0]]);
 				} else {
 					$result = "Session tokens are not set.";
 				}
