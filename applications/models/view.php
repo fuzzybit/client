@@ -123,7 +123,7 @@
 		{
 			if (isset($this->parameters["node"]))
 			{
-				$path = $this->localDirectory . "php5/files/";
+				$path = $this->localDirectory . "/php5/files/";
 				$filename = str_replace(".", "_", $this->parameters["node"]);
 
 				$handle = fopen($path . $filename . ".html", "w");
