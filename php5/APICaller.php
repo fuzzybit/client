@@ -277,7 +277,6 @@ class APICaller
 				throw new Exception(HTTPStatusCode($code), $code);
 			}
 
-
 			if ($CURLOPT_HEADER) {
 				if (isset($httpHeaders["Cache-Control"]))
 					header("Cache-Control: " . $httpHeaders["Cache-Control"]);
