@@ -41,7 +41,7 @@
 		private $result;
 
 		/**
-		 * This constructor accepts an URI and parameters and instantiates a LayoutView. Session begins here.
+		 * This constructor accepts an URI and parameters and instantiates a LayoutView.
 		 *
 		 * @param	string $URI
 		 * @param	array $parameters
@@ -57,19 +57,28 @@
 			$this->URI = $URI;
 			$this->parameters = $parameters;
 
-			ini_set('session.cookie_secure', TRUE);
-			if (isset($this->parameters["mode"]) && $this->parameters["mode"] == "edit") {
-				$_SESSION["tokens"] = array(self::editorToken => md5(rand()));
-
-				setcookie("tokenID", $_SESSION["tokens"][self::editorToken], time() + 24 * 60 * 60, "/", "", TRUE);
-			}
-
 			$api = new APICaller();
 			$this->result = $api->prepareAPICall("contentStyleScript", $this->parameters, "GET");
 
 			if (isset($this->result["tokens"])) {
 				foreach ($this->result["tokens"] as $key => $value)
 					$_SESSION["tokens"][$key] = $value;
+			}
+
+			$mode = isset($this->parameters["mode"]) && $this->parameters["mode"] == "edit";
+			$mode = $mode && !isset($this->parameters["node"]);
+			$mode = $mode && !isset($this->parameters["oid"]);
+			if ($mode) {
+				$this->parameters["value"] = 17;
+
+				$result = $api->prepareAPICall("contentStyleScript", $this->parameters, "GET");
+
+				if (isset($result["tokens"])) {
+					foreach ($result["tokens"] as $key => $value)
+						$_SESSION["tokens"][$key] = $value;
+
+					setcookie("tokenID", $key . "." . $value, time() + 24 * 60 * 60, "/", "", TRUE);
+				}
 			}
 		}
 
