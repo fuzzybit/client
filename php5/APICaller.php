@@ -267,6 +267,10 @@ class APICaller
 				headerHTTPStatus($code);
 
 				$result = json_decode($result, TRUE);
+
+				if (array_key_exists("errorMessage", $result)) {
+					$_SESSION[$result["errorMessage"]] = $result["data"]["metadata"];
+				}
 			} elseif ($code == 304) {
 				headerHTTPStatus($code);
 
@@ -291,7 +295,11 @@ class APICaller
 					header("Last-Modified: " . $httpHeaders["Last-Modified"]);
 			}
 		} catch (Exception $exception) {
-			$result = array("errorMessage" => $exception->getMessage());
+//			$result = array("errorMessage" => $exception->getMessage());
+
+			$result = json_decode($result, TRUE);
+
+			$result["errorMessage"] = $exception->getMessage();
 		}
 
 		ob_end_flush();
