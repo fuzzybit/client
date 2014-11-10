@@ -120,7 +120,7 @@
 				$_blnValid = (isset($_SESSION["tokens"]) && isset($_SESSION["tokens"][$explode[0]]));
 
 				if ($_blnValid) {
-					$_blnValid = ($_SESSION["tokens"][$explode[0]] == $explode[1]);
+					$_blnValid = ($_SESSION["tokens"][$explode[0]] == urldecode($explode[1]));
 
 					if (!$_blnValid)
 						$result = "Token mismatch.";
@@ -206,7 +206,15 @@
 		{
 			$this->URI = $this->protocol . "://" . $this->domain . "/" . $frontController::$request;
 
-			$view = new View($this->URI, $frontController->params);
+			if (isset($frontController->params["error"]) && isset($_SESSION[$frontController->params["error"]])) {
+				$params = $_SESSION[$frontController->params["error"]];
+
+				unset($_SESSION[$frontController->params["error"]]);
+			} else {
+				$params = $frontController->params;
+			}
+
+			$view = new View($this->URI, $params);
 
 			$frontController->body = $view->render("../views/index.php");
 		}
@@ -288,6 +296,8 @@
 						$result = $this->view($this->URI, $frontController->params);
 					}
 				}
+			} else {
+				$result = json_encode($result);
 			}
 
 			$frontController->body = $result;
