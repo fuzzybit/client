@@ -67,7 +67,7 @@ $_txtScript
 <div class="edgeLogo" style="left: -10px; width: 60px;"><img src="$protocol://$domain/images/logo.jpg" alt="logo" class="logoImage" style="left: -280px;" /></div>
 <div class="edgeLogo" style="left: auto; right: -10px; width: 60px;"><img src="$protocol://$domain/images/logo.jpg" alt="logo" class="logoImage" style="left: 0px;" /></div>
 
-<a href="$protocol://$domain/"><div id="fuzzybit"><span id="fuzzy">fuzzy</span><span id="bit">BIT</span>&nbsp;<span id="motto">blurring the bounds of the web</span></div></a>
+<a href="$protocol://$domain/"><div id="fuzzybit"><span id="fuzzy">fuzzy</span><span id="bit">BIT</span>&nbsp;<span id="motto">blurring the bounds of the web</span> BETA</div></a>
 
 <div id="topLine">$title&nbsp;<img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" /><img src="$protocol://$domain/images/10.png" alt="fuzzy dot" />&nbsp;$title&nbsp;<img src="$protocol://$domain/images/10.png" alt="fuzzy dot" /><img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" />&nbsp;$title</div>
 
