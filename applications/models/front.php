@@ -180,7 +180,6 @@
 			$this->_params["controller"] = empty($explode[0]) ? self::CONTROLLER : $explode[0];
 			$this->_params["action"] = empty($explode[1]) ? self::ACTION : $explode[1];
 			$this->_params["value"] = empty($explode[3]) ? self::$defaultValue : $explode[3];
-//			$this->_params["body"] = "";
 
 			for ($index = 1, $count = count($explode); (2 * $index) < $count; $index++)
 				$this->_params[$explode[2 * $index]] = isset($explode[2 * $index + 1]) ? $explode[2 * $index + 1] : NULL;
