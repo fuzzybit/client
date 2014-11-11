@@ -300,7 +300,7 @@
 				$result = json_encode($result);
 			}
 
-//			$frontController->body = $result;
+			$frontController->body = $result;
 
 			return $result;
 		}
