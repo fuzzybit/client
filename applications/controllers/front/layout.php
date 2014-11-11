@@ -241,9 +241,6 @@
 		 */
 		public function mode($frontController, $isXHR)
 		{
-			header("Access-Control-Allow-Origin: https://fuzzybit");
-			header("Access-Control-Allow-Header: X-Requested-With");
-
 			$result = array();
 			$result["data"] = NULL;
 			$result["errorMessage"] = $this->checkToken($_POST);
