@@ -140,6 +140,10 @@
 		 */
 		private function __construct()
 		{
+			header("Access-Control-Allow-Origin: https://fuzzybit");
+			header("Access-Control-Allow-Headers: X-Requested-With");
+			header("Access-Control-Allow-Credentials: true");
+
 			switch ($_SERVER["REQUEST_METHOD"]) {
 				case "GET":
 					self::$requestType = self::GET;
