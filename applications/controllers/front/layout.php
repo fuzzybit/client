@@ -241,6 +241,9 @@
 		 */
 		public function mode($frontController, $isXHR)
 		{
+			header("Access-Control-Allow-Origin: https://fuzzybit");
+			header("Access-Control-Allow-Header: X-Requested-With");
+
 			$result = array();
 			$result["data"] = NULL;
 			$result["errorMessage"] = $this->checkToken($_POST);
@@ -300,7 +303,7 @@
 				$result = json_encode($result);
 			}
 
-			$frontController->body = $result;
+//			$frontController->body = $result;
 
 			return $result;
 		}
