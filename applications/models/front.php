@@ -133,6 +133,8 @@
 		{
 			if(self::$_instance instanceof self)
 				self::$_instance = NULL;
+
+			session_write_close();
 		}
 
 		/**
@@ -143,6 +145,9 @@
 			header("Access-Control-Allow-Origin: https://fuzzybit");
 			header("Access-Control-Allow-Headers: X-Requested-With");
 			header("Access-Control-Allow-Credentials: true");
+
+			ini_set('session.cookie_secure', TRUE);	
+			session_start();
 
 			switch ($_SERVER["REQUEST_METHOD"]) {
 				case "GET":
