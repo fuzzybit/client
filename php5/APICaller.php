@@ -282,6 +282,9 @@ class APICaller
 			}
 
 			if ($CURLOPT_HEADER) {
+				if (isset($httpHeaders["Access-Control-Allow-Origin"]))
+					header("Access-Control-Allow-Origin: " . $httpHeaders["Access-Control-Allow-Origin"]);
+
 				if (isset($httpHeaders["Cache-Control"]))
 					header("Cache-Control: " . $httpHeaders["Cache-Control"]);
 
