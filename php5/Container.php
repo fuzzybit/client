@@ -60,12 +60,6 @@
 		 */
 		public static function newFrontInstance($URI)
 		{
-			ini_set('session.cookie_secure', TRUE);	
-			session_start();
-/**
-			if (isset($_GET["error"]) && preg_match("/0x[0-9]{8}$/", $_GET["error"]))
-				$URI = rtrim($URI, "/") . "/error/" . $_GET["error"];
-**/
 			$URI = rtrim($URI, "/");
 			if (isset($_GET)) {
 				foreach ($_GET as $key => $value)
@@ -81,8 +75,6 @@
 			echo $front->body;
 
 			FrontController::destroy();
-
-			session_write_close();
 		}
 
 		/**
