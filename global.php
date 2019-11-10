@@ -18,7 +18,6 @@
 	include_once("php5/global.php");
 
 	define("e_HOME",	"http://www.fuzzybit.com/");
-	define("e_OPENID",	"/home/fuzzybit/openid/oid_store");
 
 	/**
 	 * This token formats a hidden HTML form input tag.
@@ -47,22 +46,4 @@ HIDDEN;
 		$_SESSION["commentator"] = md5(uniqid(rand(), TRUE));
 
 		return $_SESSION["commentator"];
-	}
-
-	/**
-	 * This is an OpenID function.
-	 *
-	 * @return	array
-	 */
-	function AXSchema()
-	{
-		return array(	"fullname"	=> "http://axschema.org/namePerson",
-				"nickname"	=> "http://axschema.org/namePerson/friendly",
-				"gender"	=> "http://axschema.org/person/gender",
-				"email"		=> "http://axschema.org/contact/email",
-				"country"	=> "http://axschema.org/contact/country/home",
-				"postcode"	=> "http://axschema.org/contact/postalCode/home",
-				"birthdate"	=> "http://axschema.org/birthDate",
-				"language"	=> "http://axschema.org/pref/language",
-				"timezone"	=> "http://axschema.org/pref/timezone");
 	}

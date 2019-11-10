@@ -16,7 +16,7 @@
 
 	$_txtStyle = $this->styles();
 
-	$_txtContent = $this->layout();
+	$_txtLayout = $this->layout();
 
 	$title = "";
 
@@ -71,7 +71,7 @@ $_txtScript
 
 <div id="topLine">$title&nbsp;<img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" /><img src="$protocol://$domain/images/10.png" alt="fuzzy dot" />&nbsp;$title&nbsp;<img src="$protocol://$domain/images/10.png" alt="fuzzy dot" /><img src="$protocol://$domain/images/01.png" alt="small fuzzy dot" />&nbsp;$title</div>
 
-$_txtContent
+$_txtLayout
 
 <div class="footerLine print" id="upperFooter">
 <a href="$protocol://$domain/">Home</a>&nbsp;&#8226;&nbsp;<a href="$protocol://$domain/contact.php">Contact</a>
